@@ -11,6 +11,7 @@
 		AD96446B26066E6900429600 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD96446A26066E6900429600 /* ContentView.swift */; };
 		AD96446D26066E6A00429600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD96446C26066E6A00429600 /* Assets.xcassets */; };
 		AD96447026066E6A00429600 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD96446F26066E6A00429600 /* Preview Assets.xcassets */; };
+		AD96447926067DEA00429600 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD96447826067DEA00429600 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		AD96446C26066E6A00429600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD96446F26066E6A00429600 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD96447126066E6A00429600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD96447826067DEA00429600 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				AD96446826066E6900429600 /* e_shopApp.swift */,
 				AD96446A26066E6900429600 /* ContentView.swift */,
+				AD96447B26067DF100429600 /* Navigations */,
 				AD96446C26066E6A00429600 /* Assets.xcassets */,
 				AD96447126066E6A00429600 /* Info.plist */,
 				AD96446E26066E6A00429600 /* Preview Content */,
@@ -67,6 +70,14 @@
 				AD96446F26066E6A00429600 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD96447B26067DF100429600 /* Navigations */ = {
+			isa = PBXGroup;
+			children = (
+				AD96447826067DEA00429600 /* TabBar.swift */,
+			);
+			path = Navigations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD96447926067DEA00429600 /* TabBar.swift in Sources */,
 				AD96446B26066E6900429600 /* ContentView.swift in Sources */,
 				AD96446926066E6900429600 /* e_shopApp.swift in Sources */,
 			);
