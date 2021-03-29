@@ -9,35 +9,39 @@ import SwiftUI
 
 struct TabBar: View {
     var body: some View {
-        NavigationView{
+        TabView{
+                ContentView()
+            
+            .tabItem {
+                Image(systemName: "house")
+                    
+            }
+            
             ContentView()
-        }.tabItem {
-            Image(systemName: "home")
-        }
-        
-        NavigationView{
-            ContentView()
-        }.tabItem {
+        .tabItem {
             Image(systemName: "heart")
         }
-        
-        NavigationView{
             ContentView()
-        }.tabItem {
+        
+        .tabItem {
             Image(systemName: "magnifyingglass")
         }
-        
-        NavigationView{
             ContentView()
-        }.tabItem {
+        
+        .tabItem {
             Image(systemName: "bag")
         }
+            AccountView()
         
-        NavigationView{
-            ContentView()
-        }.tabItem {
+        .tabItem {
             Image(systemName: "person")
         }
+            
+            
+
+        
+        
+    }
     }
 }
 

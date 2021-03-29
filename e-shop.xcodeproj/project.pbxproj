@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0FA32BDC3BE697B85B96AB /* libPods-e-shop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E505CDA8907BA19FB0FADB /* libPods-e-shop.a */; };
+		AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C1E2E260908D60065DD37 /* AccountView.swift */; };
+		AD7C1E32260A70C40065DD37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7C1E31260A70C40065DD37 /* GoogleService-Info.plist */; };
 		AD96446926066E6900429600 /* e_shopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD96446826066E6900429600 /* e_shopApp.swift */; };
 		AD96446B26066E6900429600 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD96446A26066E6900429600 /* ContentView.swift */; };
 		AD96446D26066E6A00429600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD96446C26066E6A00429600 /* Assets.xcassets */; };
@@ -15,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25C957AC2527DB9DEB90C597 /* Pods-e-shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-shop.release.xcconfig"; path = "Target Support Files/Pods-e-shop/Pods-e-shop.release.xcconfig"; sourceTree = "<group>"; };
+		9EEF7786CA8C958716A39739 /* Pods-e-shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-shop.debug.xcconfig"; path = "Target Support Files/Pods-e-shop/Pods-e-shop.debug.xcconfig"; sourceTree = "<group>"; };
+		A6E505CDA8907BA19FB0FADB /* libPods-e-shop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-e-shop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7C1E2E260908D60065DD37 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		AD7C1E31260A70C40065DD37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD96446526066E6900429600 /* e-shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD96446826066E6900429600 /* e_shopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_shopApp.swift; sourceTree = "<group>"; };
 		AD96446A26066E6900429600 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,17 +37,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0FA32BDC3BE697B85B96AB /* libPods-e-shop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043A140A5CD239D9779E907B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6E505CDA8907BA19FB0FADB /* libPods-e-shop.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C1A042F283A2F891B6CF39A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EEF7786CA8C958716A39739 /* Pods-e-shop.debug.xcconfig */,
+				25C957AC2527DB9DEB90C597 /* Pods-e-shop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD7C1E2C260908C50065DD37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD96446A26066E6900429600 /* ContentView.swift */,
+				AD7C1E2E260908D60065DD37 /* AccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AD96445C26066E6900429600 = {
 			isa = PBXGroup;
 			children = (
 				AD96446726066E6900429600 /* e-shop */,
 				AD96446626066E6900429600 /* Products */,
+				5C1A042F283A2F891B6CF39A /* Pods */,
+				043A140A5CD239D9779E907B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,8 +92,9 @@
 		AD96446726066E6900429600 /* e-shop */ = {
 			isa = PBXGroup;
 			children = (
+				AD7C1E31260A70C40065DD37 /* GoogleService-Info.plist */,
 				AD96446826066E6900429600 /* e_shopApp.swift */,
-				AD96446A26066E6900429600 /* ContentView.swift */,
+				AD7C1E2C260908C50065DD37 /* View */,
 				AD96447B26067DF100429600 /* Navigations */,
 				AD96446C26066E6A00429600 /* Assets.xcassets */,
 				AD96447126066E6A00429600 /* Info.plist */,
@@ -87,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD96447426066E6A00429600 /* Build configuration list for PBXNativeTarget "e-shop" */;
 			buildPhases = (
+				BE96977CDAF6E4E865DE7991 /* [CP] Check Pods Manifest.lock */,
 				AD96446126066E6900429600 /* Sources */,
 				AD96446226066E6900429600 /* Frameworks */,
 				AD96446326066E6900429600 /* Resources */,
+				DE66107688832CEED3AB1BAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,16 +180,60 @@
 			files = (
 				AD96447026066E6A00429600 /* Preview Assets.xcassets in Resources */,
 				AD96446D26066E6A00429600 /* Assets.xcassets in Resources */,
+				AD7C1E32260A70C40065DD37 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE96977CDAF6E4E865DE7991 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-e-shop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE66107688832CEED3AB1BAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-e-shop/Pods-e-shop-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-e-shop/Pods-e-shop-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-e-shop/Pods-e-shop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD96446126066E6900429600 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */,
 				AD96447926067DEA00429600 /* TabBar.swift in Sources */,
 				AD96446B26066E6900429600 /* ContentView.swift in Sources */,
 				AD96446926066E6900429600 /* e_shopApp.swift in Sources */,
@@ -276,6 +361,7 @@
 		};
 		AD96447526066E6A00429600 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EEF7786CA8C958716A39739 /* Pods-e-shop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -298,6 +384,7 @@
 		};
 		AD96447626066E6A00429600 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25C957AC2527DB9DEB90C597 /* Pods-e-shop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
