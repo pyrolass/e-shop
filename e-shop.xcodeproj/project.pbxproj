@@ -11,6 +11,9 @@
 		AD43223526177DCF009365A6 /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD43223426177DCF009365A6 /* ItemsView.swift */; };
 		AD4322382617826D009365A6 /* MainStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4322372617826D009365A6 /* MainStoreView.swift */; };
 		AD43223B261782CB009365A6 /* MainStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD43223A261782CA009365A6 /* MainStoreModel.swift */; };
+		AD432240261A0430009365A6 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD43223F261A0430009365A6 /* SigninView.swift */; };
+		AD432244261A12AB009365A6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD432243261A12AB009365A6 /* SignupView.swift */; };
+		AD432248261A1338009365A6 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD432247261A1338009365A6 /* MainPageView.swift */; };
 		AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C1E2E260908D60065DD37 /* AccountView.swift */; };
 		AD7C1E32260A70C40065DD37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7C1E31260A70C40065DD37 /* GoogleService-Info.plist */; };
 		AD824DBD2614C0A900E7DF99 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD824DBC2614C0A900E7DF99 /* Test.swift */; };
@@ -31,6 +34,9 @@
 		AD43223426177DCF009365A6 /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
 		AD4322372617826D009365A6 /* MainStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoreView.swift; sourceTree = "<group>"; };
 		AD43223A261782CA009365A6 /* MainStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoreModel.swift; sourceTree = "<group>"; };
+		AD43223F261A0430009365A6 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		AD432243261A12AB009365A6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		AD432247261A1338009365A6 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		AD7C1E2E260908D60065DD37 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		AD7C1E31260A70C40065DD37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD824DBC2614C0A900E7DF99 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 		AD7C1E2C260908C50065DD37 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD432247261A1338009365A6 /* MainPageView.swift */,
+				AD43223F261A0430009365A6 /* SigninView.swift */,
+				AD432243261A12AB009365A6 /* SignupView.swift */,
 				AD96446A26066E6900429600 /* ContentView.swift */,
 				AD7C1E2E260908D60065DD37 /* AccountView.swift */,
 				AD824DBC2614C0A900E7DF99 /* Test.swift */,
@@ -266,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD432244261A12AB009365A6 /* SignupView.swift in Sources */,
 				AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */,
 				AD3C32B62614C28900CEB8E5 /* Data.swift in Sources */,
+				AD432240261A0430009365A6 /* SigninView.swift in Sources */,
 				AD4322382617826D009365A6 /* MainStoreView.swift in Sources */,
 				AD96447926067DEA00429600 /* TabBar.swift in Sources */,
 				AD824DBD2614C0A900E7DF99 /* Test.swift in Sources */,
@@ -276,6 +287,7 @@
 				ADFF51762614C49500E54321 /* TestViewModel.swift in Sources */,
 				AD96446926066E6900429600 /* e_shopApp.swift in Sources */,
 				AD43223526177DCF009365A6 /* ItemsView.swift in Sources */,
+				AD432248261A1338009365A6 /* MainPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

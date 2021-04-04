@@ -29,7 +29,7 @@ struct e_shopApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainPageView()
         }
     }
 }

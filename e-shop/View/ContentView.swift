@@ -9,54 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isActive=false
+    @State var searchField:String = ""
+    @Binding var rootIsActive : Bool
     
     var body: some View {
         
         ZStack {
             Content
-
+            
             TabBar
         }
         
     }
     
     var Content:some View{
-        NavigationView {
-            ScrollView{
-                VStack {
-                    HStack(){
-                        VStack(){
-                            HStack {
-                                Image(systemName: "house.fill")
-                                Text("deliver to")
-                                
-                            }
-                            
-                            Text("House")
-                        }
-                        Spacer()
-                        HStack{
-                            
-                            Image(systemName: "bell")
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                                .padding()
-                            
-                            Image(systemName: "person.crop.circle")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                            
-                        }
-                    }
+        ZStack {
+            VStack {
+                ScrollView  {
                     HStack{
                         Image(systemName: "magnifyingglass")
                             .padding()
-                        Text("search")
+                        
+                        TextField("",text: $searchField)
+                            .foregroundColor(.white)
+                        
                         Spacer()
                     }
                     .background(Color.gray)
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                     .foregroundColor(.white)
+                    .padding(.top,25)
                     
                     HStack{
                         VStack {
@@ -88,7 +70,7 @@ struct ContentView: View {
                     NavigationLink(
                         destination: Test(),
                         label: {
-                            Text("Restaurants")
+                            Text("Main Store")
                                 .padding()
                                 .padding(.top,10)
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 90, maxHeight: .infinity, alignment: .topLeading).foregroundColor(.yellow)
@@ -175,52 +157,74 @@ struct ContentView: View {
                             Text("Pharma")
                         }
                     }
-                }.padding()
+                }
+            }
+        }.navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: VStack(){
+            HStack {
+                Image(systemName: "house.fill")
+                Text("deliver to")
                 
             }
+            
+            Text("House")
         }
+        ,
+        trailing:
+            HStack{
+                
+                Image(systemName: "bell")
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    .padding()
+                
+                Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                
+            }
+        )
+        
     }
+    
+    
+    
+    
     var TabBar:some View{
         TabView{
             
             
-                Content
-            
-            .tabItem {
-                Image(systemName: "house")
+            Content
+                
+                .tabItem {
+                    Image(systemName: "house")
                     
-            }
-            
-        
-        .tabItem {
-            Image(systemName: "heart")
-        }
+                }
+                
+                
+                .tabItem {
+                    Image(systemName: "heart")
+                }
             Content
-        
-        .tabItem {
-            Image(systemName: "magnifyingglass")
-        }
+                
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                }
             Content
-        
-        .tabItem {
-            Image(systemName: "bag")
-        }
-            AccountView()
-        
-        .tabItem {
-            Image(systemName: "person")
-        }
+                
+                .tabItem {
+                    Image(systemName: "bag")
+                }
+            AccountView(shouldPopToRootView: $rootIsActive)
+                
+                .tabItem {
+                    Image(systemName: "person")
+                }
             
             
-
-        
-        
+            
+            
+            
+        }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 }

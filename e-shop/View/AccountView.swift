@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AccountView: View {
+    
+    @Binding var shouldPopToRootView : Bool
+    
     var body: some View {
         ZStack {
             VStack{
@@ -70,19 +73,19 @@ struct AccountView: View {
                             }.foregroundColor(.white)
                             Spacer()
                         }.padding()
-                    
                     }
                 }
+                
             }.padding(50)
             
-        }.background(Color.green)
+            Button (action: { self.shouldPopToRootView = false } ){
+                Text("Sign Out")
+            }
+            
+        }
         .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
         
-    }
-}
-
-struct AccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountView()
+        
     }
 }
