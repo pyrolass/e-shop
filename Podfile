@@ -7,5 +7,6 @@ use_frameworks!
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Firestore'
 	pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
   pod 'FirebaseFirestoreSwift', '~> 7.0-beta'
 end

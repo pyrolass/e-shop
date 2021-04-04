@@ -85,7 +85,13 @@ struct AccountView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
-        
-        
+    }
+    
+    
+}
+
+struct AccountView_Previews: PreviewProvider {
+    static var previews: some View {
+        AccountView(shouldPopToRootView: .constant(false))
     }
 }

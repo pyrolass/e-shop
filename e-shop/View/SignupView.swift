@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignupView: View {
     @State var username:String = ""
     @State var password:String = ""
-    @State var isSignedIn:Bool = false
+    @State var isSignedin:Bool = false
     @Binding var rootIsActive:Bool
     
     var body: some View {
@@ -32,7 +33,7 @@ struct SignupView: View {
                 
                 NavigationLink(
                     destination: ContentView(rootIsActive:$rootIsActive),
-                    isActive: $isSignedIn,
+                    isActive: .constant(isSignedin),
                     label: {
                         HStack {
                             Text("Sign Up")
@@ -44,11 +45,25 @@ struct SignupView: View {
                         .background(Color.green)
                         .cornerRadius(10.0)
                         .onTapGesture {
-                            isSignedIn.toggle()
+                            Auth.auth().createUser(withEmail: username, password: password) { authResult, error in
+                                if (error != nil){
+                                    print(error)
+                                }
+                                else{
+                                    isSignedin.toggle()
+                                }
+                            }
+                            
                         }
                     })
             }
             .padding()
             .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct SignupView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignupView(rootIsActive: .constant(false))
     }
 }
