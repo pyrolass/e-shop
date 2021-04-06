@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var searchField:String = ""
     @Binding var rootIsActive : Bool
     
+    
     var body: some View {
         
         ZStack {
@@ -68,7 +69,7 @@ struct ContentView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                     
                     NavigationLink(
-                        destination: Test(),
+                        destination: ShopView(),
                         label: {
                             Text("Main Store")
                                 .padding()
