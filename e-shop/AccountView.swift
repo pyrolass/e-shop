@@ -10,22 +10,14 @@ import SwiftUI
 struct AccountView: View {
     
     @Binding var shouldPopToRootView : Bool
+    @ObservedObject var user = UserViewModel()
     
     var body: some View {
         ZStack {
             VStack{
-                HStack{
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Text("Hello Las!")
-                    Spacer()
-                    
-                }.padding()
-                .background(Color.red)
-                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                .foregroundColor(.white)
-                
+                ForEach(user.data){data in
+                    UserView(data: data)
+                }
                 ScrollView{
                     VStack{
                         HStack{
@@ -40,7 +32,7 @@ struct AccountView: View {
                             
                             VStack {
                                 Image(systemName: "person.fill")
-                                Text("Pyament")
+                                Text("Add Item")
                             }
                             .frame(width: 200, height: 80, alignment: .center)
                             .background(Color.blue)
@@ -75,13 +67,15 @@ struct AccountView: View {
                         }.padding()
                     }
                 }
-                
+                ProceedButton(title: "Sign Out")
+                    .onTapGesture {
+                        self.shouldPopToRootView = false
+                    }
+                Spacer(minLength: 50)
             }.padding(50)
-            
-            Button (action: { self.shouldPopToRootView = false } ){
-                Text("Sign Out")
-            }
-            
+        }
+        .onAppear(){
+            user.fetchData()
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemDetail: View {
     
-    var data = itemModel[0]
+    var data = ItemModel(title: "test", price: 12, owner: "test")
     
     var body: some View {
         ScrollView{

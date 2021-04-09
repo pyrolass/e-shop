@@ -27,6 +27,11 @@
 		AD96446D26066E6A00429600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD96446C26066E6A00429600 /* Assets.xcassets */; };
 		AD96447026066E6A00429600 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD96446F26066E6A00429600 /* Preview Assets.xcassets */; };
 		AD96447926067DEA00429600 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD96447826067DEA00429600 /* TabBar.swift */; };
+		ADAFF81926209EDF00B196E6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFF81826209EDF00B196E6 /* UserModel.swift */; };
+		ADAFF81C26209F2D00B196E6 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFF81B26209F2D00B196E6 /* UserViewModel.swift */; };
+		ADAFF81F2620A0EC00B196E6 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFF81E2620A0EC00B196E6 /* UserView.swift */; };
+		ADAFF8232620AADD00B196E6 /* ProceedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFF8222620AADD00B196E6 /* ProceedButton.swift */; };
+		ADAFF8262620AEF500B196E6 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFF8252620AEF500B196E6 /* AddItemView.swift */; };
 		ADBC78A9261CD34700AD6719 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC78A8261CD34700AD6719 /* ItemViewModel.swift */; };
 		ADBC78B0261CE71900AD6719 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC78AF261CE71900AD6719 /* ItemDetail.swift */; };
 		ADFF51762614C49500E54321 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51752614C49500E54321 /* TestViewModel.swift */; };
@@ -59,6 +64,11 @@
 		AD96446F26066E6A00429600 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD96447126066E6A00429600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD96447826067DEA00429600 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		ADAFF81826209EDF00B196E6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ADAFF81B26209F2D00B196E6 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		ADAFF81E2620A0EC00B196E6 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		ADAFF8222620AADD00B196E6 /* ProceedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedButton.swift; sourceTree = "<group>"; };
+		ADAFF8252620AEF500B196E6 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		ADBC78A8261CD34700AD6719 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		ADBC78AF261CE71900AD6719 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		ADFF51752614C49500E54321 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 				AD43223A261782CA009365A6 /* MainStoreModel.swift */,
 				AD432265261B7586009365A6 /* VIPModel.swift */,
 				AD432271261CCD99009365A6 /* ItemModel.swift */,
+				ADAFF81826209EDF00B196E6 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +124,7 @@
 				AD43226A261B76E0009365A6 /* VIPItem.swift */,
 				AD43226E261CCCEC009365A6 /* ShopItem.swift */,
 				ADBC78AF261CE71900AD6719 /* ItemDetail.swift */,
+				ADAFF81E2620A0EC00B196E6 /* UserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,8 +155,10 @@
 				AD3C32B42614C27A00CEB8E5 /* Model */,
 				ADFF51742614C46F00E54321 /* ViewModel */,
 				AD7C1E2C260908C50065DD37 /* View */,
+				ADAFF8212620AAB400B196E6 /* Library */,
 				AD96447B26067DF100429600 /* Navigations */,
 				AD432247261A1338009365A6 /* MainPageView.swift */,
+				ADAFF8252620AEF500B196E6 /* AddItemView.swift */,
 				AD43223F261A0430009365A6 /* SigninView.swift */,
 				AD432243261A12AB009365A6 /* SignupView.swift */,
 				AD96446A26066E6900429600 /* ContentView.swift */,
@@ -173,11 +187,20 @@
 			path = Navigations;
 			sourceTree = "<group>";
 		};
+		ADAFF8212620AAB400B196E6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				ADAFF8222620AADD00B196E6 /* ProceedButton.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		ADFF51742614C46F00E54321 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				ADFF51752614C49500E54321 /* TestViewModel.swift */,
 				ADBC78A8261CD34700AD6719 /* ItemViewModel.swift */,
+				ADAFF81B26209F2D00B196E6 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -297,7 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD432266261B7586009365A6 /* VIPModel.swift in Sources */,
+				ADAFF81C26209F2D00B196E6 /* UserViewModel.swift in Sources */,
+				ADAFF81926209EDF00B196E6 /* UserModel.swift in Sources */,
 				AD432244261A12AB009365A6 /* SignupView.swift in Sources */,
+				ADAFF8232620AADD00B196E6 /* ProceedButton.swift in Sources */,
+				ADAFF81F2620A0EC00B196E6 /* UserView.swift in Sources */,
 				AD43226B261B76E0009365A6 /* VIPItem.swift in Sources */,
 				AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */,
 				AD432263261B751A009365A6 /* ShopView.swift in Sources */,
@@ -316,6 +343,7 @@
 				AD43223526177DCF009365A6 /* ItemsView.swift in Sources */,
 				AD432248261A1338009365A6 /* MainPageView.swift in Sources */,
 				AD43226F261CCCEC009365A6 /* ShopItem.swift in Sources */,
+				ADAFF8262620AEF500B196E6 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

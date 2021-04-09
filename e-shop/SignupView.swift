@@ -35,15 +35,7 @@ struct SignupView: View {
                     destination: ContentView(rootIsActive:$rootIsActive),
                     isActive: .constant(isSignedin),
                     label: {
-                        HStack {
-                            Text("Sign Up")
-                                .font(.custom("Avenir-Medium", size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 220, height: 30)
-                        .padding()
-                        .background(Color.green)
-                        .cornerRadius(10.0)
+                        ProceedButton(title: "Sign Up")
                         .onTapGesture {
                             Auth.auth().createUser(withEmail: username, password: password) { authResult, error in
                                 if (error != nil){

@@ -13,12 +13,6 @@ struct ItemModel:Identifiable,Codable{
     @DocumentID var id = UUID().uuidString
     var title:String
     var price:Int
+    var owner:String
 }
 
-var itemModel = [
-    ItemModel(title: "car", price: 50),
-    ItemModel(title: "car", price: 50),
-    ItemModel(title: "car", price: 50),
-    ItemModel(title: "car", price: 50),
-    
-]

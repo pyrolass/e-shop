@@ -36,21 +36,15 @@ struct SigninView: View {
                     destination: ContentView(rootIsActive:$rootIsActive),
                     isActive: .constant(isSignedin),
                     label: {
-                        HStack {
-                            Text("Sign In")
-                                .font(.custom("Avenir-Medium", size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 220, height: 30)
-                        .padding()
-                        .background(Color.green)
-                        .cornerRadius(10.0)
+                        ProceedButton(title: "Sign in")
                         .onTapGesture {
-                            Auth.auth().signIn(withEmail: username, password: password) { (_: AuthDataResult?, error: Error?) in
+                            Auth.auth().signIn(withEmail: username, password: password) { (res, error) in
                                 if (error != nil){
                                     print(error)
+                                    return
                                 }
                                 else{isSignedin.toggle()}
+                                print(res?.user.uid)
                             }
                             
                         }
