@@ -14,5 +14,10 @@ struct ItemModel:Identifiable,Codable{
     var title:String
     var price:Int
     var owner:String
+    var color:String
+    var views:Int
+    var brand:String
+    var catagory:String
+    var location:String
 }
 

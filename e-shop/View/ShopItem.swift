@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShopItem: View {
     
-    var data = ItemModel(title: "test", price: 12, owner: "test")
+    var data = ItemModel(title: "", price: 12, owner: "", color: "", views: 1, brand: "", catagory: "", location: "")
     
     var body: some View {
         ZStack{

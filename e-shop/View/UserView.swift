@@ -14,7 +14,7 @@ struct UserView: View {
         HStack{
             Image(systemName: "person.crop.circle")
                 .resizable()
-                .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(width: 40, height: 40, alignment: .center)
             Text("Hello \(data.name.capitalized)!")
             Spacer()
             

@@ -23,31 +23,18 @@ struct MainPageView: View {
                     destination: SigninView(rootIsActive: $isActive),
                     isActive:$isActive,
                     label: {
-                        HStack {
-                            Text("Sign In")
-                                
-                                .font(.custom("Avenir-Medium", size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 220, height: 30)
-                        .padding()
-                        .background(Color.green)
-                        .cornerRadius(10.0)
+                        ProceedButton(title: "Sign In")
                     }
                 ).isDetailLink(false)
+                
+                Spacer()
+                    .frame(height:20)
+                
                 NavigationLink(
                     destination: SignupView(rootIsActive: $isActive),
                     isActive:$isActive,
                     label: {
-                        HStack {
-                            Text("Sign Up")
-                                .font(.custom("Avenir-Medium", size: 20))
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 220, height: 30)
-                        .padding()
-                        .background(Color.green)
-                        .cornerRadius(10.0)
+                        ProceedButton(title: "Sign Up")
                     }).isDetailLink(false)
             }
         }

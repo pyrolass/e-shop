@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ItemDetail: View {
     
-    var data = ItemModel(title: "test", price: 12, owner: "test")
+    var data = ItemModel(title: "", price: 12, owner: "", color: "", views: 12, brand: "", catagory: "", location: "")
+    var namespace:Namespace.ID
     
     var body: some View {
         ScrollView{
@@ -42,7 +43,7 @@ struct ItemDetail: View {
                     Image(systemName: "leaf")
                         .resizable()
                         .frame(width: 25, height: 25, alignment: .center)
-                    Text("Catagory:cars")
+                    Text("Catagory:\(data.catagory)")
                         .bold()
                     
                     Spacer()
@@ -58,16 +59,16 @@ struct ItemDetail: View {
                     Image(systemName: "leaf")
                         .resizable()
                         .frame(width: 25, height: 25, alignment: .center)
-                    Text("Color:blue")
+                    Text("Color:\(data.color)")
                         .bold()
                     
                     Spacer()
                     Image(systemName: "calendar")
                         .resizable()
                         .frame(width: 25, height: 25, alignment: .center)
-                    Text("Brand: Nike")
+                    Text("Brand: \(data.brand)")
                         .bold()
-                        .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(width: 100, height: 50, alignment: .center)
                 }
                 
                 Divider()
@@ -79,19 +80,19 @@ struct ItemDetail: View {
                 VStack{
                     HStack{
                         Image(systemName: "location.fill")
-                        Text("Erbil")
+                        Text("\(data.location)")
                         Spacer()
                     }
                     Spacer(minLength: 20)
                     HStack{
                         Image(systemName: "eye.fill")
-                        Text("2")
+                        Text("\(data.views)")
                         Spacer()
                     }
                     Spacer(minLength: 20)
                     HStack{
                         Image(systemName: "person.fill")
-                        Text("Las")
+                        Text("\(data.owner)")
                         Spacer()
                     }
                     Divider()
@@ -117,7 +118,8 @@ struct ItemDetail: View {
 }
 
 struct ItemDetail_Previews: PreviewProvider {
+    @Namespace static  var namespace
     static var previews: some View {
-        ItemDetail()
+        ItemDetail(namespace:namespace)
     }
 }

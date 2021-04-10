@@ -31,12 +31,20 @@ struct AccountView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10.0))
                             
                             VStack {
-                                Image(systemName: "person.fill")
-                                Text("Add Item")
+                                NavigationLink(
+                                    destination: AddItemView(),
+                                    label: {
+                                        VStack{
+                                            Image(systemName: "person.fill")
+                                            Text("Add Item")
+                                        }
+                                        .foregroundColor(.black)
+                                        .frame(width: 200, height: 80, alignment: .center)
+                                        .background(Color.blue)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                                    })
                             }
-                            .frame(width: 200, height: 80, alignment: .center)
-                            .background(Color.blue)
-                            .clipShape(RoundedRectangle(cornerRadius: 10.0))
+
                             Spacer()
                         }
                         HStack{
