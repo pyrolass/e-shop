@@ -155,7 +155,12 @@ struct ContentView: View {
                     HStack{
                         ForEach(catagories){
                             data in
-                            CatagoryView(data: data)
+                            NavigationLink(
+                                destination: CatagoryView(catagory:data),
+                                label: {
+                                    CatagoryDetail(data: data)
+                                    
+                                })
                         }
                     }
                 }

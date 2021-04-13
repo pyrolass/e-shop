@@ -13,9 +13,10 @@ struct CatagoryModel:Identifiable,Codable{
 }
 
 var catagories = [
-    CatagoryModel(title: "Clothes"),
-    CatagoryModel(title: "Electronics"),
-    CatagoryModel(title: "Luxury"),
-    CatagoryModel(title: "Jewelery"),
-    CatagoryModel(title: "Perfume")
+    CatagoryModel(title: "clothes"),
+    CatagoryModel(title: "electronics"),
+    CatagoryModel(title: "luxury"),
+    CatagoryModel(title: "jewelery"),
+    CatagoryModel(title: "perfume"),
+    CatagoryModel(title: "cosmetic")
 ]

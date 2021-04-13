@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CatagoryView: View {
+struct CatagoryDetail: View {
     var data = catagories[0]
     var body: some View {
         HStack {
@@ -23,7 +23,7 @@ struct CatagoryView: View {
     }
 }
 
-struct CatagoryView_Previews: PreviewProvider {
+struct CatagoryDetail_Previews: PreviewProvider {
     static var previews: some View {
         CatagoryView()
     }
