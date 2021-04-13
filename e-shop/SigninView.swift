@@ -25,12 +25,15 @@ struct SigninView: View {
                     .background(Color("lightGray"))
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
+                    .foregroundColor(.black)
+                
                 
                 SecureField("Password", text: $password)
                     .padding()
                     .background(Color("lightGray"))
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
+                    .foregroundColor(.black)
                 
                 NavigationLink(
                     destination: ContentView(rootIsActive:$rootIsActive),

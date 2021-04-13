@@ -35,6 +35,7 @@ struct ShopItem: View {
                     Spacer()
                 }.padding()
             }
+            .foregroundColor(.black)
         }.background(Color("lightGray"))
         .clipShape(RoundedRectangle(cornerRadius: 20.0))
     }

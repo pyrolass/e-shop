@@ -29,6 +29,7 @@ struct VIPItem: View {
                     Spacer()
                 }
             }
+            .foregroundColor(.black)
         }.background(Color("lightGray"))
     }
 }

@@ -58,9 +58,10 @@ struct ShopView: View {
                 .background(Color.gray)
                 .clipShape(RoundedRectangle(cornerRadius: 25))
                 .foregroundColor(.white)
-                .padding(.top,10)
+                .padding(10)
                 
-                LazyVGrid(columns: [GridItem(.fixed(200)),GridItem(.fixed(200))], content: {
+                
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160)),GridItem(.adaptive(minimum: 160))], content: {
                     
                     ForEach(viewModel.data){data in
                         VStack{

@@ -18,6 +18,8 @@ struct AccountView: View {
                 ForEach(user.data){data in
                     UserView(data: data)
                 }
+                .padding(.leading, 10)
+                .padding(.trailing, 10)
                 ScrollView{
                     VStack{
                         HStack{
@@ -26,7 +28,7 @@ struct AccountView: View {
                                 Image(systemName: "creditcard.fill")
                                 Text("Pyament")
                             }
-                            .frame(width: 200, height: 80, alignment: .center)
+                            .frame(width: 180, height: 80, alignment: .center)
                             .background(Color.blue)
                             .clipShape(RoundedRectangle(cornerRadius: 10.0))
                             
@@ -39,7 +41,7 @@ struct AccountView: View {
                                             Text("Add Item")
                                         }
                                         .foregroundColor(.black)
-                                        .frame(width: 200, height: 80, alignment: .center)
+                                        .frame(width: 180, height: 80, alignment: .center)
                                         .background(Color.blue)
                                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
                                     })
@@ -47,25 +49,7 @@ struct AccountView: View {
 
                             Spacer()
                         }
-                        HStack{
-                            Spacer()
-                            VStack {
-                                Image(systemName: "creditcard.fill")
-                                Text("Pyament")
-                            }.frame(width: 200, height: 80, alignment: .center)
-                            .background(Color.blue)
-                            .clipShape(RoundedRectangle(cornerRadius: 10.0))
-                            
-                            
-                            VStack {
-                                Image(systemName: "person.fill")
-                                Text("Pyament")
-                            }
-                            .frame(width: 200, height: 80, alignment: .center)
-                            .background(Color.blue)
-                            .clipShape(RoundedRectangle(cornerRadius: 10.0))
-                            Spacer()
-                        }.padding(.top,5)
+                        
                         
                         HStack{
                             VStack(alignment:.leading){

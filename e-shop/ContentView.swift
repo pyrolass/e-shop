@@ -20,155 +20,24 @@ struct ContentView: View {
             
             TabBar
         }
-        
-    }
-    
-    var Content:some View{
-        ZStack {
-            VStack {
-                ScrollView  {
-                    HStack{
-                        Image(systemName: "magnifyingglass")
-                            .padding()
-                        
-                        TextField("",text: $searchField)
-                            .foregroundColor(.white)
-                        
-                        Spacer()
-                    }
-                    .background(Color.gray)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
-                    .foregroundColor(.white)
-                    .padding(.top,25)
-                    
-                    HStack{
-                        VStack {
-                            Text("balance")
-                            
-                            Text("0 IQD")
-                        }.padding()
-                        .foregroundColor(.white)
-                        Spacer()
-                        HStack{
-                            Image(systemName: "arrow.up")
-                                .foregroundColor(.red)
-                                .frame(width: 50, height: 50)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                            
-                            
-                            
-                            Image(systemName: "arrow.down")
-                                .foregroundColor(.green)
-                                .frame(width: 50, height: 50)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                        }.padding()
-                    }
-                    .background(Color.gray)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
-                    
-                    NavigationLink(
-                        destination: ShopView(),
-                        label: {
-                            Text("Main Store")
-                                .padding()
-                                .padding(.top,10)
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 90, maxHeight: .infinity, alignment: .topLeading).foregroundColor(.yellow)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25))
-                        })
-                    
-                    HStack{
-                        Text("Markets")
-                            .foregroundColor(.white)
-                            .padding(.bottom,50)
-                            .padding(.leading,60)
-                            .frame(width: 200, height: 100)
-                            .background(Color.green)
-                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                        Spacer()
-                        Text("Express")
-                            
-                            .padding(.bottom,50)
-                            .padding(.trailing,60)
-                            .frame(width: 200, height: 100)
-                            .background(Color.green)
-                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                    }
-                    
-                    
-                    HStack{
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                    }
-                    HStack{
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                        VStack{
-                            Image(systemName: "cross.fill")
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            Text("Pharma")
-                        }
-                    }
-                }
-            }
-        }.navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: VStack(){
             HStack {
                 Image(systemName: "house.fill")
-                Text("deliver to")
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                VStack {
+                    Text("Deliver to")
+                        .bold()
+            
+                    Text("House")
+                        .bold()
+                }
+            
                 
             }
             
-            Text("House")
+            
         }
         ,
         trailing:
@@ -186,7 +55,117 @@ struct ContentView: View {
             }
         )
         
+        
+        
     }
+    
+    var Content:some View{
+        
+        VStack() {
+            ScrollView  {
+                HStack{
+                    VStack(alignment:.leading,spacing:10) {
+                        Text("You ")
+                            .foregroundColor(.pink)
+                            .bold()
+                            +
+                            Text("Shop ")
+                            .foregroundColor(.black)
+                            .bold()
+                            +
+                            Text("We ")
+                            .bold()
+                            .foregroundColor(.pink)
+                            +
+                            Text("Deliver")
+                            .foregroundColor(.black)
+                            .bold()
+                    }
+                    .font(.title)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "cart.fill")
+                        .resizable()
+                        .frame(width: 100, height: 100, alignment: .center)
+                        .foregroundColor(.pink)
+                    
+                    
+                    
+                }
+                .padding()
+                .background(Color("mintCream"))
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .padding(.top,10)
+                
+                
+                
+                HStack{
+                    VStack {
+                        Text("Balance")
+                            .bold()
+                        Text("0$")
+                            .bold()
+                    }.padding()
+                    .font(.title2)
+                    .foregroundColor(.black)
+                    Spacer()
+                    HStack{
+                        
+                        Image(systemName: "plus")
+                            .foregroundColor(.green)
+                            .frame(width: 50, height: 50)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                    }.padding()
+                }
+                .background(Color("mintCream"))
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .padding(.top)
+                
+                NavigationLink(
+                    destination: ShopView(),
+                    label: {
+                        HStack {
+                            Text("Main Store")
+                                .foregroundColor(.black)
+                                .bold()
+                                .font(.title)
+                               
+
+                            Spacer()
+                        }.padding()
+                        .frame(height:150)
+                        .background(Color("mintCream"))
+                        .clipShape(RoundedRectangle(cornerRadius: 25))
+                    }).padding(.top,10)
+                
+                
+                
+                
+                HStack{
+                    Text("Catagories")
+                        .bold()
+                        .font(.title)
+                    
+                    Spacer()
+                }
+                .padding()
+                ScrollView(.horizontal){
+                    HStack{
+                        ForEach(catagories){
+                            data in
+                            CatagoryView(data: data)
+                        }
+                    }
+                }
+                
+                }
+            }.padding(.leading,10)
+        .padding(.trailing,10)
+        }
+        
+        
     
     
     
@@ -229,6 +208,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

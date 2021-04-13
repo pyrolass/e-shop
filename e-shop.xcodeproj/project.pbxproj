@@ -36,6 +36,8 @@
 		ADAFF8472620C61F00B196E6 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFF8462620C61F00B196E6 /* VisualEffectBlur.swift */; };
 		ADBC78A9261CD34700AD6719 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC78A8261CD34700AD6719 /* ItemViewModel.swift */; };
 		ADBC78B0261CE71900AD6719 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC78AF261CE71900AD6719 /* ItemDetail.swift */; };
+		ADEA7BAB262382AB00BB06C9 /* CatagoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA7BAA262382AB00BB06C9 /* CatagoryModel.swift */; };
+		ADEA7BAE2623842B00BB06C9 /* CatagoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA7BAD2623842B00BB06C9 /* CatagoryView.swift */; };
 		ADFF51762614C49500E54321 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51752614C49500E54321 /* TestViewModel.swift */; };
 		BB9BB65A126A99CF61BC85FA /* Pods_e_shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEA6642DD3EF12198560500 /* Pods_e_shop.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		ADAFF8462620C61F00B196E6 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		ADBC78A8261CD34700AD6719 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		ADBC78AF261CE71900AD6719 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		ADEA7BAA262382AB00BB06C9 /* CatagoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoryModel.swift; sourceTree = "<group>"; };
+		ADEA7BAD2623842B00BB06C9 /* CatagoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoryView.swift; sourceTree = "<group>"; };
 		ADFF51752614C49500E54321 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 				AD432265261B7586009365A6 /* VIPModel.swift */,
 				AD432271261CCD99009365A6 /* ItemModel.swift */,
 				ADAFF81826209EDF00B196E6 /* UserModel.swift */,
+				ADEA7BAA262382AB00BB06C9 /* CatagoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				AD43226E261CCCEC009365A6 /* ShopItem.swift */,
 				ADBC78AF261CE71900AD6719 /* ItemDetail.swift */,
 				ADAFF81E2620A0EC00B196E6 /* UserView.swift */,
+				ADEA7BAD2623842B00BB06C9 /* CatagoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,7 +170,6 @@
 				AD432247261A1338009365A6 /* MainPageView.swift */,
 				AD43223F261A0430009365A6 /* SigninView.swift */,
 				AD432243261A12AB009365A6 /* SignupView.swift */,
-				ADAFF8462620C61F00B196E6 /* VisualEffectBlur.swift */,
 				AD96446A26066E6900429600 /* ContentView.swift */,
 				AD432262261B751A009365A6 /* ShopView.swift */,
 				AD7C1E2E260908D60065DD37 /* AccountView.swift */,
@@ -195,6 +200,7 @@
 		ADAFF8212620AAB400B196E6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				ADAFF8462620C61F00B196E6 /* VisualEffectBlur.swift */,
 				ADAFF8222620AADD00B196E6 /* ProceedButton.swift */,
 				ADAFF8432620C1C600B196E6 /* CloseButton.swift */,
 			);
@@ -330,10 +336,12 @@
 				ADAFF81926209EDF00B196E6 /* UserModel.swift in Sources */,
 				AD432244261A12AB009365A6 /* SignupView.swift in Sources */,
 				ADAFF8232620AADD00B196E6 /* ProceedButton.swift in Sources */,
+				ADEA7BAB262382AB00BB06C9 /* CatagoryModel.swift in Sources */,
 				ADAFF81F2620A0EC00B196E6 /* UserView.swift in Sources */,
 				ADAFF8442620C1C600B196E6 /* CloseButton.swift in Sources */,
 				AD43226B261B76E0009365A6 /* VIPItem.swift in Sources */,
 				AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */,
+				ADEA7BAE2623842B00BB06C9 /* CatagoryView.swift in Sources */,
 				AD432263261B751A009365A6 /* ShopView.swift in Sources */,
 				AD3C32B62614C28900CEB8E5 /* Data.swift in Sources */,
 				AD432240261A0430009365A6 /* SigninView.swift in Sources */,
