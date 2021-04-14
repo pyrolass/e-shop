@@ -14,12 +14,13 @@ struct AddItemView: View {
     
     var itemCatagories=[
         "clothes",
-        "vehicles",
         "luxury",
         "jewelery",
-        "furniture",
-        "cosmetic"
+        "electronics",
+        "cosmetic",
+        "perfume"
     ]
+    var user = Auth.auth().currentUser?.uid
     
     @State var itemTitle = ""
     @State var itemBrand = ""
@@ -63,7 +64,7 @@ struct AddItemView: View {
                 Section{
                     Button(action: {
                         
-                            var newItem = ItemModel(title: itemTitle, price: itemPrice, owner: Auth.auth().currentUser?.uid as! String, color: itemColor, views: 10, brand: itemBrand, catagory: selectedCatagory, location: "erbil")
+                        let newItem = ItemModel(title: itemTitle, price: itemPrice, owner: user!, color: itemColor, views: 10, brand: itemBrand, catagory: selectedCatagory, location: "erbil")
                             viewModel.addData(data: newItem)
                         
                     }, label: {

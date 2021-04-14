@@ -63,7 +63,7 @@ struct ShopView: View {
                 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 160)),GridItem(.adaptive(minimum: 160))], content: {
                     
-                    ForEach(viewModel.data){data in
+                    ForEach((viewModel.data).filter({"\($0.title)".contains(search) || search.isEmpty})){data in
                         VStack{
                             ShopItem(data: data)
                                 .matchedGeometryEffect(id: data.id, in: namespace, isSource: !showModal)

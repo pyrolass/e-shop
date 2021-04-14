@@ -47,7 +47,7 @@ struct SigninView: View {
                                     return
                                 }
                                 else{isSignedin.toggle()}
-                                print(res?.user.uid)
+                                
                             }
                             
                         }

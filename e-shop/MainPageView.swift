@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainPageView: View {
-    @State var isActive : Bool = false
+    @State var signInIsActive : Bool = false
+    @State var signUpIsActive : Bool = false
     
     var body: some View {
         NavigationView{
@@ -20,8 +21,8 @@ struct MainPageView: View {
                     
                     
                 NavigationLink(
-                    destination: SigninView(rootIsActive: $isActive),
-                    isActive:$isActive,
+                    destination: SigninView(rootIsActive: $signInIsActive),
+                    isActive:$signInIsActive,
                     label: {
                         ProceedButton(title: "Sign In")
                     }
@@ -31,8 +32,8 @@ struct MainPageView: View {
                     .frame(height:20)
                 
                 NavigationLink(
-                    destination: SignupView(rootIsActive: $isActive),
-                    isActive:$isActive,
+                    destination: SignupView(rootIsActive: $signUpIsActive),
+                    isActive:$signUpIsActive,
                     label: {
                         ProceedButton(title: "Sign Up")
                     }).isDetailLink(false)
