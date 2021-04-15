@@ -8,15 +8,15 @@
 import SwiftUI
 import Firebase
 
-struct SignupView: View {
+struct UsernameView: View {
     @State var username:String = ""
-    @State var password:String = ""
     @State var isSignedin:Bool = false
     @Binding var rootIsActive:Bool
+    var viewModel = UserViewModel()
     
     var body: some View {
             VStack{
-                Text("EShop")
+                Text("Please add username ")
                     .fontWeight(.bold)
                     .font(.largeTitle)
                 TextField("Username", text: $username)
@@ -25,26 +25,20 @@ struct SignupView: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                 
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(Color("lightGray"))
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
                 
                 NavigationLink(
-                    destination: UsernameView(rootIsActive:$rootIsActive),
+                    destination: ContentView(rootIsActive:$rootIsActive),
                     isActive: .constant(isSignedin),
                     label: {
-                        ProceedButton(title: "Sign Up")
+                        ProceedButton(title: "Continue")
                         .onTapGesture {
-                            Auth.auth().createUser(withEmail: username, password: password) { authResult, error in
-                                if (error != nil){
-                                    print(error)
-                                }
-                                else{
-                                    isSignedin.toggle()
-                                }
+                            var username = UserModel(name: self.username, owner: Auth.auth().currentUser!.uid)
+                            if username != nil{
+                                viewModel.addData(data: username)
+                                isSignedin.toggle()
                             }
+                            
+                            
                             
                         }
                     })
@@ -54,8 +48,8 @@ struct SignupView: View {
     }
 }
 
-struct SignupView_Previews: PreviewProvider {
+struct UsernameView_Previews: PreviewProvider {
     static var previews: some View {
-        SignupView(rootIsActive: .constant(false))
+        UsernameView(rootIsActive: .constant(false))
     }
 }

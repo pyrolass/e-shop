@@ -20,13 +20,17 @@ struct AddItemView: View {
         "cosmetic",
         "perfume"
     ]
+    
     var user = Auth.auth().currentUser?.uid
     
     @State var itemTitle = ""
     @State var itemBrand = ""
-    @State var itemPrice:Int=0
+    @State var itemPrice:Int = 0
     @State var itemColor:String = ""
     @State var selectedCatagory = "clothes"
+    var userViewModel = UserViewModel()
+    @State var username:String? = nil
+    
     
     var isDisabled:Bool{
         itemTitle.isEmpty || itemBrand.isEmpty || itemColor.isEmpty
@@ -40,8 +44,11 @@ struct AddItemView: View {
                     TextField("item name",text:$itemTitle)
                 }
                 Section{
-                    TextField("item price $", value: $itemPrice, formatter: NumberFormatter())
-                        .keyboardType(.decimalPad)
+                    HStack {
+                        TextField("item price $", value: $itemPrice, formatter: NumberFormatter())
+                    }
+                    
+                    
                 }
                 Section {
                     Picker("Catagory", selection: $selectedCatagory) {
@@ -64,11 +71,15 @@ struct AddItemView: View {
                 Section{
                     Button(action: {
                         
+                        
+                        
                         let newItem = ItemModel(title: itemTitle, price: itemPrice, owner: user!, color: itemColor, views: 10, brand: itemBrand, catagory: selectedCatagory, location: "erbil")
-                            viewModel.addData(data: newItem)
+                        
+                            //viewModel.addData(data: newItem)
                         
                     }, label: {
                         Text("Submit Item")
+                        
                             
                     })
                 }.disabled(isDisabled)
@@ -88,3 +99,4 @@ struct AddItemView_Previews: PreviewProvider {
         AddItemView()
     }
 }
+

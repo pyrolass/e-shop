@@ -19,6 +19,7 @@
 		AD43226B261B76E0009365A6 /* VIPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD43226A261B76E0009365A6 /* VIPItem.swift */; };
 		AD43226F261CCCEC009365A6 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD43226E261CCCEC009365A6 /* ShopItem.swift */; };
 		AD432272261CCD99009365A6 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD432271261CCD99009365A6 /* ItemModel.swift */; };
+		AD615C7C2628B60900E50C6A /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD615C7B2628B60900E50C6A /* UsernameView.swift */; };
 		AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C1E2E260908D60065DD37 /* AccountView.swift */; };
 		AD7C1E32260A70C40065DD37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7C1E31260A70C40065DD37 /* GoogleService-Info.plist */; };
 		AD824DBD2614C0A900E7DF99 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD824DBC2614C0A900E7DF99 /* Test.swift */; };
@@ -60,6 +61,7 @@
 		AD43226A261B76E0009365A6 /* VIPItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPItem.swift; sourceTree = "<group>"; };
 		AD43226E261CCCEC009365A6 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
 		AD432271261CCD99009365A6 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		AD615C7B2628B60900E50C6A /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
 		AD7C1E2E260908D60065DD37 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		AD7C1E31260A70C40065DD37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD824DBC2614C0A900E7DF99 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				AD432247261A1338009365A6 /* MainPageView.swift */,
 				AD43223F261A0430009365A6 /* SigninView.swift */,
 				AD432243261A12AB009365A6 /* SignupView.swift */,
+				AD615C7B2628B60900E50C6A /* UsernameView.swift */,
 				AD96446A26066E6900429600 /* ContentView.swift */,
 				AD432262261B751A009365A6 /* ShopView.swift */,
 				ADEA7BBD2626410400BB06C9 /* CatagoryView.swift */,
@@ -345,6 +348,7 @@
 				ADEA7BAB262382AB00BB06C9 /* CatagoryModel.swift in Sources */,
 				ADAFF81F2620A0EC00B196E6 /* UserView.swift in Sources */,
 				ADAFF8442620C1C600B196E6 /* CloseButton.swift in Sources */,
+				AD615C7C2628B60900E50C6A /* UsernameView.swift in Sources */,
 				AD43226B261B76E0009365A6 /* VIPItem.swift in Sources */,
 				AD7C1E2F260908D60065DD37 /* AccountView.swift in Sources */,
 				ADEA7BAE2623842B00BB06C9 /* CatagoryDetail.swift in Sources */,

@@ -61,12 +61,14 @@ struct ShopView: View {
                 .padding(10)
                 
                 
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160)),GridItem(.adaptive(minimum: 160))], content: {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160),spacing: 16),GridItem(.adaptive(minimum: 160),spacing: 16),],spacing:16, content: {
                     
                     ForEach((viewModel.data).filter({"\($0.title)".contains(search) || search.isEmpty})){data in
                         VStack{
                             ShopItem(data: data)
+                                
                                 .matchedGeometryEffect(id: data.id, in: namespace, isSource: !showModal)
+                                .frame(height: 250)
                                 .onTapGesture {
                                     withAnimation(.linear) {
                                         showModal.toggle()
