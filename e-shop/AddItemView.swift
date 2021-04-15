@@ -21,21 +21,21 @@ struct AddItemView: View {
         "perfume"
     ]
     
-    var user = Auth.auth().currentUser?.uid
+    @State var user:String = ""
     
     @State var itemTitle = ""
     @State var itemBrand = ""
     @State var itemPrice:Int = 0
     @State var itemColor:String = ""
     @State var selectedCatagory = "clothes"
-    var userViewModel = UserViewModel()
-    @State var username:String? = nil
     
+    @ObservedObject var userViewModel = UserViewModel()
     
     var isDisabled:Bool{
         itemTitle.isEmpty || itemBrand.isEmpty || itemColor.isEmpty
             || itemPrice <= 0
     }
+    
     
     var body: some View {
         VStack{
@@ -68,14 +68,16 @@ struct AddItemView: View {
         
                 }
                 
+                
                 Section{
                     Button(action: {
                         
                         
                         
-                        let newItem = ItemModel(title: itemTitle, price: itemPrice, owner: user!, color: itemColor, views: 10, brand: itemBrand, catagory: selectedCatagory, location: "erbil")
+                        let newItem = ItemModel(title: itemTitle, price: itemPrice, owner: userViewModel.model.name, color: itemColor, views: 10, brand: itemBrand, catagory: selectedCatagory, location: "erbil")
+                            
+                        viewModel.addData(data: newItem)
                         
-                            //viewModel.addData(data: newItem)
                         
                     }, label: {
                         Text("Submit Item")
@@ -87,6 +89,11 @@ struct AddItemView: View {
             }
             
             
+            
+        }
+        .onAppear{
+            userViewModel.fetchData()
+            viewModel.fetchData()
             
         }
         .navigationBarTitle("Sell an item!")

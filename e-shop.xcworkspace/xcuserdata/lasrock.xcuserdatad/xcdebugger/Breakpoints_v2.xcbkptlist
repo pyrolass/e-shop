@@ -28,5 +28,53 @@
             </Actions>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "608D8AFF-3489-4DEA-A817-0049F42F4894"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-shop/View/UserView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "UserView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "608D8AFF-3489-4DEA-A817-0049F42F4894 - 485683e09197a20c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_shop.UserView.init(data: e_shop.UserModel) -&gt; e_shop.UserView"
+                  moduleName = "e-shop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasrock/Desktop/myDev/e-shop/e-shop/View/UserView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "608D8AFF-3489-4DEA-A817-0049F42F4894 - f414f19fa0f631e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_shop.UserView.init() -&gt; e_shop.UserView"
+                  moduleName = "e-shop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasrock/Desktop/myDev/e-shop/e-shop/View/UserView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

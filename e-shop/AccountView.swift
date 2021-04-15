@@ -11,13 +11,13 @@ struct AccountView: View {
     
     @Binding var shouldPopToRootView : Bool
     @ObservedObject var user = UserViewModel()
-    
+
     var body: some View {
         ZStack {
             VStack{
-                ForEach(user.data){data in
-                    UserView(data: data)
-                }
+                
+                UserView(data: user.model)
+                    
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
                 ScrollView{

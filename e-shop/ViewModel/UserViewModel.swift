@@ -10,26 +10,30 @@ import Firebase
 import FirebaseFirestoreSwift
 
 class UserViewModel:ObservableObject{
-    @Published var data=[UserModel]()
+    @Published var model:UserModel = UserModel(name: "moc", owner: "moc")
     @Published var user = Auth.auth().currentUser?.uid
     
     private var db = Firestore.firestore()
     
     func fetchData(){
-        db.collection("Usernames").whereField("owner", isEqualTo: user!).addSnapshotListener { (querySnapshot, error) in
-            guard let documents = querySnapshot?.documents else {
-                print("no documents")
-                return
+        
+        db.collection("Usernames").whereField("owner", isEqualTo: user).addSnapshotListener { (query, error) in
+            if let e = error{
+                print("issue in fire store\(e)")
             }
-            self.data=documents.compactMap { (queryDocumentSnapshot) -> UserModel? in
-                let data = queryDocumentSnapshot.data()
-                
-                let name = data["name"] as! String
-                
-                let owner = data["owner"] as! String
-                
-                return UserModel(name: name, owner: owner)
+            else{
+                if let snapShotDocument = query?.documents{
+                    for doc in snapShotDocument{
+                        let data = doc.data()
+                        if let name = data["name"] as? String{
+                            let newModel = UserModel(name: name, owner: self.user!)
+                            self.model = newModel
+                            
+                        }
+                    }
+                }
             }
+            
         }
         
     }
