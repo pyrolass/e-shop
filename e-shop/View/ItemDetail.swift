@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ItemDetail: View {
     
-    var data = ItemModel(title: "", price: 12, owner: "", color: "", views: 12, brand: "", catagory: "", location: "")
+    @ObservedObject var imageViewModel = ImageViewModel()
+    
+    var data = ItemModel(title: "", price: 12, owner: "", color: "", date: "2021", views: 12, brand: "", catagory: "", location: "")
     var namespace:Namespace.ID
     
     var body: some View {
         ScrollView{
-            Image(systemName: "leaf")
-                .resizable()
-                .frame(width:UIScreen.main.bounds.width , height: 150, alignment: .center)
+            if let img = imageViewModel.image{
+                Image(uiImage: img)
+                    .resizable()
+                    .frame(width:UIScreen.main.bounds.width , height: 150, alignment: .center)
+            }
+            
             Divider()
             VStack{
                 HStack {
@@ -50,7 +55,8 @@ struct ItemDetail: View {
                     Image(systemName: "calendar")
                         .resizable()
                         .frame(width: 25, height: 25, alignment: .center)
-                    Text("Date: 2021")
+                    
+                    Text("Date: \(data.date)")
                         .bold()
                         .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
@@ -113,6 +119,9 @@ struct ItemDetail: View {
                 
             }.padding()
             
+        }.onAppear{
+            imageViewModel.imageLocation = data.title
+            imageViewModel.getImage()
         }
     }
 }

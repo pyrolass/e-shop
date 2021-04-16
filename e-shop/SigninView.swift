@@ -13,33 +13,34 @@ struct SigninView: View {
     @Binding var rootIsActive:Bool
     @State var isSignedin=false
     
+    
     var body: some View {
         
         
-            VStack{
-                Text("EShop")
-                    .fontWeight(.bold)
-                    .font(.largeTitle)
-                TextField("Username", text: $username)
-                    .padding()
-                    .background(Color("lightGray"))
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
-                    .foregroundColor(.black)
-                
-                
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(Color("lightGray"))
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
-                    .foregroundColor(.black)
-                
-                NavigationLink(
-                    destination: ContentView(rootIsActive:$rootIsActive),
-                    isActive: .constant(isSignedin),
-                    label: {
-                        ProceedButton(title: "Sign in")
+        VStack{
+            Text("EShop")
+                .fontWeight(.bold)
+                .font(.largeTitle)
+            TextField("Username", text: $username)
+                .padding()
+                .background(Color("lightGray"))
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
+                .foregroundColor(.black)
+            
+            
+            SecureField("Password", text: $password)
+                .padding()
+                .background(Color("lightGray"))
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
+                .foregroundColor(.black)
+            
+            NavigationLink(
+                destination: ContentView(rootIsActive:$rootIsActive),
+                isActive: .constant(isSignedin),
+                label: {
+                    ProceedButton(title: "Sign in")
                         .onTapGesture {
                             Auth.auth().signIn(withEmail: username, password: password) { (res, error) in
                                 if (error != nil){
@@ -50,11 +51,12 @@ struct SigninView: View {
                                 
                             }
                             
+                            
                         }
-                    })
-            }
-            .padding()
-            .navigationBarTitleDisplayMode(.inline)
+                })
+        }
+        .padding()
+        .navigationBarTitleDisplayMode(.inline)
         
     }
 }

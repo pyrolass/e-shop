@@ -11,15 +11,15 @@ struct AccountView: View {
     
     @Binding var shouldPopToRootView : Bool
     @ObservedObject var user = UserViewModel()
-
+    
     var body: some View {
         ZStack {
             VStack{
                 
                 UserView(data: user.model)
                     
-                .padding(.leading, 10)
-                .padding(.trailing, 10)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
                 ScrollView{
                     VStack{
                         HStack{
@@ -44,9 +44,10 @@ struct AccountView: View {
                                         .frame(width: 180, height: 80, alignment: .center)
                                         .background(Color.blue)
                                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                                        
                                     })
                             }
-
+                            
                             Spacer()
                         }
                         

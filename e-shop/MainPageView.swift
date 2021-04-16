@@ -18,8 +18,8 @@ struct MainPageView: View {
                     .fontWeight(.bold)
                     .font(.largeTitle)
                     .padding()
-                    
-                    
+                
+                
                 NavigationLink(
                     destination: SigninView(rootIsActive: $signInIsActive),
                     isActive:$signInIsActive,

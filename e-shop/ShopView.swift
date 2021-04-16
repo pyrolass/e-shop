@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ShopView: View {
     
+    @ObservedObject var imageViewModel = ImageViewModel()
+    @ObservedObject var viewModel = ItemViewModel()
+    
     var dataForVip = vipData
     @State var showModal = false
     @Namespace var namespace
     @State var selectedItem: ItemModel? = nil
     @State var isDisabled = false
-    @ObservedObject var viewModel = ItemViewModel()
+    
     
     @State var search:String = ""
     var body: some View {
@@ -64,9 +67,9 @@ struct ShopView: View {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 160),spacing: 16),GridItem(.adaptive(minimum: 160),spacing: 16),],spacing:16, content: {
                     
                     ForEach((viewModel.data).filter({"\($0.title)".contains(search) || search.isEmpty})){data in
+                        
                         VStack{
                             ShopItem(data: data)
-                                
                                 .matchedGeometryEffect(id: data.id, in: namespace, isSource: !showModal)
                                 .frame(height: 250)
                                 .onTapGesture {
@@ -78,12 +81,18 @@ struct ShopView: View {
                                     }
                                 }.disabled(isDisabled)
                         }.matchedGeometryEffect(id: "container\(String(describing: data.id))", in: namespace, isSource: !showModal)
+                        .onAppear{
+                            imageViewModel.imageLocation = data.title
+                            imageViewModel.getImage()
+                            
+                        }
                         
                     }
                 })
             }
         }.onAppear(){
             viewModel.fetchData()
+            
             
         }
         .zIndex(1)
@@ -112,6 +121,10 @@ struct ShopView: View {
             .frame(maxWidth: .infinity)
             
         }
+    }
+    func getImage(model:ItemModel){
+        imageViewModel.imageLocation = model.title
+        imageViewModel.getImage()
     }
 }
 

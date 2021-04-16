@@ -9,15 +9,24 @@ import SwiftUI
 
 struct ShopItem: View {
     
-    var data = ItemModel(title: "", price: 12, owner: "", color: "", views: 1, brand: "", catagory: "", location: "")
+    @ObservedObject var imageViewModel = ImageViewModel()
     
+    var data = ItemModel(title: "", price: 12, owner: "", color: "", date: "2021", views: 1, brand: "", catagory: "", location: "")
+    init(data:ItemModel) {
+        self.data = data
+        imageViewModel.imageLocation = data.title
+        imageViewModel.getImage()
+    }
     var body: some View {
         ZStack{
             VStack{
-                Image(systemName: "leaf")
-                    .resizable()
-                    .frame(height: 150, alignment: .center)
-                    .background(Color.red)
+                if let img = imageViewModel.image{
+                    Image(uiImage: imageViewModel.image!)
+                            .resizable()
+                            .frame(height: 150, alignment: .center)
+                            .background(Color.red)
+                }
+                
                 
                 HStack{
                     Image(systemName: "leaf")
@@ -36,13 +45,13 @@ struct ShopItem: View {
                 }.padding()
             }
             .foregroundColor(.black)
-        }.background(Color("lightGray"))
+        }
+        .background(Color("lightGray"))
         .clipShape(RoundedRectangle(cornerRadius: 20.0))
+        
+        
     }
+    
 }
 
-struct ShopItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ShopItem()
-    }
-}
+
